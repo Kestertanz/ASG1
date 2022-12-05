@@ -10,6 +10,8 @@ features included:
 3.contacting us
 4.Chatbot
 
+The website is catering for those that are looking help in the IT departmant 
+
 
 
 
