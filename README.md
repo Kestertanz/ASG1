@@ -28,6 +28,10 @@ As the company is a IT company the goal was to make the website look as techy as
 
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
+- [HTMl](https://html.com/)
+    - The project uses **HTML** describe the structure of Web pages
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+    - The project uses **CSS** to describe the presentation of Web pages, including colors, layout, and fonts
 
 
 
