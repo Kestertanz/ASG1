@@ -1,25 +1,33 @@
 # ASG1
 
-Goal: Customers who are looking for consulatation and are looking for infomation about my services
+This website is for customer who would like help with IT and would like to take a look at our services. This website shows infomation about our comapny and to show them work that we have done. This wesbite also allows them to contact us to negotiate.
 
-site goal: to present and appealing to customers, and gaining their trust
+ 
+## Design Process
 
-features included: 
-1.information about our company
-2.Services that we provide
-3.contacting us
-4.Chatbot
+I wanted a website where it was it for the customer to see all the information about the company and easy to navigate around it the goal was to 
 
-The website is catering for those that are looking help in the IT departmant 
+As the company is a IT company the goal was to make the website look as techy as possible to make them interested with working with the company.
 
 
+## Features
+
+- Feature 1 -  Is the option will light up depending on the page they would like HOME,ABOUT US ,SERVICES,CONTACT
+- Feature 2 - There is a scroll effect when the user scrolls down the page
+- Feature 3 - The title of the page will have a cool glitchy look when hovered across
+- Feature 4 - The user and contact us by filling out a form on their reason for contacting on the contact page
 
 
 
 
+### Features Left to Implement
+- To implemnt a discount feature where the customer gets a discount if they were refered to by an existing customer
+
+## Technologies Used
 
 
-
+- [JQuery](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
 
 
 
