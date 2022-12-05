@@ -1,0 +1,36 @@
+/* JS scrolling effect */
+.reveal{
+  /* reveal causes the targets to move up-down */
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.reveal_1{
+  /* reveal_1 causes things to move left to right  */
+  position: relative;
+  transform: translateX(60px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal_1.active{
+  transform: translateX(0px);
+  opacity: 1;
+}
+.reveal_2{
+  /* cause the targets to move right to left  */
+  position: relative;
+  transform: translateX(-70px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal_2.active{
+  transform: translate(0px);
+  opacity: 1;
+}
+
+/* once the active classes are attached the targerts move to intial place  */

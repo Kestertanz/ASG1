@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<!--
+Author:Dharsan;
+class:DISM/FT/1A/06
+-->
+<head>
+  <title>HomePage</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../CSS/chatbot.css">
+  <link rel="stylesheet" href="../CSS/home.css">
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body onload="document.body.style.opacity = '1'">
+
+  <div id="chatBotOuter">
+    <div id="chatbotWindow">
+      <div class="d-flex align-items-center justify-content-between px-3 py-2 bg-white">
+        <div>
+          ChatBot
+        </div>
+        <div>
+          <i class="bi bi-dash" onclick="toggleWindow()" style="transform:translateY(4px)" id="dash"></i>
+          <!---->
+          <i class="bi bi-x" onclick="endChat()" id="cross"></i>
+        </div>
+      </div>
+      <div id="chatBody" class="p-3">
+        <!--it is supposed to-->
+      </div>
+      <div class="px-3 py-2 bg-white d-flex align-items-center justify-content-between" id="txt_area">
+        <div class="flex-fill">
+          <textarea type="text" id="messageBox" onkeyup="enterPressed(event)" placeholder="Enter Message"></textarea>
+        </div>
+        <div class="ms-3" id="send">
+          <i onclick="postMessage()" class="bi bi-send text-white"></i>
+        </div>
+      </div>
+  
+    </div>
+    
+    <div class=" text-end" id="minimalBot">
+            <div><i id="smallBot" onclick="toggleWindow()" class="bi bi-chat-dots"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--! In my html file, section is mainly used as a way to contain the divs ; -->
+  <section class="container-fluid">
+    <!--? Use to allow the content to fill the entire page-->
+    <div class="row col-xl-12" id="title_wrapper">
+
+      <div class="title row col-xl-6"><span>Consultang
+        </span><span>Technology <a target="blank"
+            href="../HTML/index.html">Projects
+            <!--? Used to isolate the web Developer and so that I can make it into a link-->
+            Aide
+          </a></span>
+      </div>
+      <!-- a standard issued nav bar -->
+      <div class="row py-4 col-xl-12">
+        <nav class="navbar navbar-expand-sm  ">          
+          <button class="navbar-toggler" type="button bg-light" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!--! used the standard issued Bootstrap Nav bar here-->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active rounded-pill"" aria-current=" page" href="../HTML/index.html">HomePage</a>
+              <a class="nav-link  rounded-pill" href="../HTML/aboutme.html">About Us</a>
+              <a class="nav-link  rounded-pill" href="../HTML/OUR_skill.html">Services and Testimonials</a>
+              <a class="nav-link  rounded-pill" href="../HTML/OUR_contact.html">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="../JS/home.js"></script>
+  <script src="../JS/OUR_chatbot.js"></script>
+</body>
+
+</html>

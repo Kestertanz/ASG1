@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+<!--
+Author:Dharsan;
+class:DISM/FT/1A/06
+-->
+
+<head>
+    <title>About Me</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/chatbot.css">
+    <link rel="stylesheet" href="../CSS/aboutme.css">
+    <link rel="stylesheet" href="../CSS/scroll_effect.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body onload="document.body.style.opacity = '1'">
+    <!-- the header is for the side bar and the full-page bar for ipad and mobile -->
+    <header>
+        <div class="justify-content-end row ">
+            <div class="btns-container">
+                <i class="bi bi-x-diamond" id="toggle-off"></i>
+                <i class="bi bi-x-diamond-fill" id="toggle-on"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="aside">
+        <div class="aside-wrapper">
+            <div class="logo-section">
+                <a class="logo" rel="home" href="#">
+                    <img src="../company_images/company_logo.png" alt="logo" style="scale: 160%;">
+                    <!--the following is from https://www.figma.com/file/YColopLNr59UjEwEoBEtN8/Smooth-%26-Sharp%3A-Free-Logo-Pack-(Community)?node-id=302%3A2-->
+                    <span>Consultang</span>
+                </a>
+                <span>Project Aide</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="../HTML/index.html">HomePage</a>
+                <a href="../HTML/aboutme.html">About Us</a>
+                <a href="../HTML/OUR_skill.html">Services and Testimonials</a>
+                <a href="../HTML/OUR_contact.html">Contact</a>
+            </nav>
+            <!-- social icons -->
+            <ul class="social-icons">
+                <li>
+                    <a href="">
+                        <i class="bi bi-reddit" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="p-5 text-white">Consultant</p>
+        </div>
+    </aside>
+    <!-- end of the nav bar  -->
+    <!-- start of the chat bot  -->
+    <div id="chatBotOuter">
+        <div id="chatbotWindow">
+            <div class="d-flex align-items-center justify-content-between px-3 py-2 bg-white">
+                <div>
+                    ChatBot
+                </div>
+                <div>
+                    <i class="bi bi-dash" onclick="toggleWindow()" style="transform:translateY(4px)" id="dash"></i>
+                    <!---->
+                    <i class="bi bi-x" onclick="endChat()" id="cross"></i>
+                </div>
+            </div>
+            <div id="chatBody" class="p-3">
+                <!--it is supposed to-->
+            </div>
+            <div class="px-3 py-2 bg-white d-flex align-items-center justify-content-between" id="txt_area">
+                <div class="flex-fill">
+                    <textarea type="text" id="messageBox" onkeyup="enterPressed(event)"
+                        placeholder="Enter Message"></textarea>
+                </div>
+                <div class="ms-3" id="send">
+                    <i onclick="postMessage()" class="bi bi-send""></i>
+            </div>
+          </div>
+      
+        </div>
+        
+        <div class=" text-end" id="minimalBot">
+                        <div><i id="smallBot" onclick="toggleWindow()" class="bi bi-chat-dots"></i></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- the end of the chat bot  -->
+
+
+    <!-- text zone  section one-->
+    <section id="section-home" class="section-home " style="min-width: 570px;">
+
+        <div class="text-zone" id="color-changer">
+            <h1 class="col-lg-9 content_changer ">Hi, <br> we are
+                <img src="../company_images/company_logo.png" alt="Jack" id="logo_text">onsultang, <br>project
+                we do
+            </h1>
+
+            <p class="gray-text">10 years experience/Affordable/Contented Clients</p>
+            <br>
+            <div class="mt-3 main_content" class="">
+                <div id="row_1" class=" mb-3 col-lg-12 col-md-12 col-xs-12 row">
+                    <!-- the intro -->
+                    <div class="text_sample">
+                        <p>
+                            Hi, we're <span class="h5 letter">Consultang</span>! we are a consultant company that offers
+                            assistance in projects in engineering, technology, cyber security and many more. . . We
+                            cater to the needs of
+                            multiple clients like,
+                            <span class="letter">Students, Teachers, Companies</span>, with their projects. We offer our
+                            assassistance by providing our clients with research materials, interviews and even chipping
+                            in onto the projects
+                            We have been in this business for 10 years, and we are still the; <span class="comple">best
+                                in the field</span>, and we have had multiple satisfied clients and we have employees
+                            experienced in a multitude of
+                            fields, some being even lectures. Furthermore, our company is has taken part in multiple
+                            competitions and just so you know, <span class="comple">we have won it all</span>
+                            Enjoy our website, and we hope to offer our assistance to you soon.
+                        </p>
+                    </div>
+                </div>
+                <div id="row_2" class="mt-4 col-lg-12  row ">
+                    <div class="fake-big-2" style="transform: translateY(5%);">Intro</div>
+
+                    <div id="row_content_myself"
+                        class="m-2 col-xl-4 col-lg-6 col-md-12 border-right border-left border-bottom ">
+
+                        <div id="content_myself" class="mb-4">
+                            <!-- the row for the card -->
+                            <h3 class="title1">Our Founder <i class="bi bi-arrow-right-circle"></i>
+                            </h3><br>
+                            <!-- the personality -->
+                            Our Company was fouded by <span class="comple">Jovan</span>
+                            He is a <span class="letter">chummy, outgoing, talkative, smiley, funny, and
+                                reserved person</span> at
+                            times, these words
+                            describe
+                            me. Why? Read to find out. For starters, <span class="comple"> I am chummy</span>. We all
+                            choose our friends, but, I
+                            don`t have intense
+                            standards for choosing my friends. I`m not a racist. <span class="letter">I`m a decent
+                                listener</span> with generally a
+                            happy disposition. I
+                            easily make friends, especially online. But because of being shy, I usually won`t do the
+                            first
+                            move to get to know someone. So I guess it`s still called “chummy” or “friendly”. Secondly,
+                            I`m an outgoing
+                            person. I don`t mean I am that person who goes to parties even if I don`t know anyone and go
+                            schmooze around with
+                            people. I mean, <span class="comple">I do things related to having fun</span> with friends
+                            and family.
+                            <div class="h3 text-center">...</div>
+                        </div>
+                    </div>
+
+                    <!-- the second content within the row -->
+                    <div id="row_content_skills"
+                        class=" m-2 col-xl-4 col-lg-5 col-md-12 border-left border-right border-bottom ">
+                        <div id="content_myskills " class="mb-3">
+                            <h3 class="title2 text-center">...</h3><br>
+                            <span class="letter">I am a smiley person</span> . If happen to
+                            meet a good friend, I still smile even if I`m feeling bad about something. I`m not a snob; I
+                            don`t want them to
+                            assume that I`m mad at them. <span class="comple">I smile because I think it looks good on
+                                me</span> . Funny. I`m always
+                            told that I`m funny. I
+                            make my friends laugh unintentionally. I don`t find myself funny at all. It`s just that I`m
+                            outspoken. Sometimes,
+                            I`m just mean and everybody thinks I`m joking. It`s amusing because I`m dead serious in
+                            saying my `inappropriate
+                            comment` then there`s them, laughing. Then after a while, I realize that I`d said something
+                            funny and laughed with
+                            them. <span class="letter">Now you know you, know more about the type of person I am</span>
+                            , i hope you would enjoy my
+                            website.
+                        </div>
+                    </div>
+                    <!-- the third content -->
+                    <div class="col-xl-3 col-lg-12 col-md-12 " id="row_content_probar">
+
+                        <div class="pro">
+                            <div class="progress" style="height:5px">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                                    style="width: 70%; ;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <p>Work So Far....</p>
+                        </div>
+                        <div class="pro">
+                            <div class="progress" style="height:5px">
+                                <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
+                                    style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>Customer Satisfication...</p>
+                        </div>
+
+                        <div class="pro">
+
+                            <div class="progress" style="height:5px">
+                                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar"
+                                    style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>Demand...</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- the follwing row that is made up of my gallery -->
+                <div class="container py-4">
+                    <h3 class="letter mr-3 ml-3">Photos</h3>
+
+                    <div class="gallery-wrap">
+                        <div class="item item-1">
+                            <div class="texti">Our founder</div>
+                        </div>
+                        <div class="item item-2">
+                            <div class="texti">Our client NUS</div>
+                        </div>
+                        <div class="item item-3">
+                            <div class="texti">Our team at Defcon</div>
+                        </div>
+                        <div class="item item-4">
+                            <div class="texti">Our office</div>
+                        </div>
+                        <div class="item item-5">
+                            <div class="texti">NTU another one of client</div>
+                        </div>
+                        <div class="item item-6">
+                            <div class="texti">Our employees</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the begin of my secondary contetn -->
+            <div class="col-lg-12" id="row_3">
+                <section id="section-work" class="col-lg-12 col-xs-12">
+                    <div id="header">
+                        <h2 class="reveal">Our Portfolio</h2>
+                    </div>
+                    <div class="col-lg-12 text-zone-2">
+                        <div>
+                            <p>
+                                <span class="letter">The following table illaustrates our previous
+                                    Affilations</span>,projects
+                                to clients
+                                Over the years, We have worked in different sectors of technology; from helping students
+                                and uindergraduates
+                                to universities. Thus through the follwing tables i hope to shine a light into my
+                                past.
+                                <br>
+                                <span class="comple">If you are interested to see some more? Visit <a
+                                        href="../HTML/OUR_skill.html">our
+                                        contact</a> page</span>
+                            </p>
+                        </div>
+                        <!-- table_1 -->
+                        <div id="table-container" class="tab reveal">
+                            <h3>Our Projects</h3>
+                            <table class="table table-dark table-bordered table-hover" id="tab1">
+                                <thead class="table table-secondary">
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Machine Learning and Urban Developement</td>
+                                        <td>2 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Covid Dectection System</td>
+                                        <td>1 Year</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Traffic Monitoring System</td>
+                                        <td>5 Month</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td colspan="1">CCTV penetration testing</td>
+                                        <td>Present</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- end of table_1
+                            start of the table_2 -->
+                            <span class="h3 comple mt-4 ">Some Of Our Clients</span>
+                            <table class="table table-dark table-bordered table-hover" id="tab2">
+                                <thead class="table table-secondary">
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Year</th>
+                                        <th scope="col">Finished Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>NUS</td>
+                                        <td>2012--2018</td>
+                                        <td>2018...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>NTU</td>
+                                        <td>2017--2021</td>
+                                        <td>2021...</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Singapore Polytechnic</td>
+                                        <td>2025...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- the end of table_2 -->
+                        </div>
+                        <!-- the start of the tab for values -->
+                        <div class="h4 mb-3" id="values_title">Our Values</div>
+                        <div class="col-lg-12 mt-3 cont">
+                            <div class="row col-xl-12">
+                                <div class="col-xl-8 col-md-12">
+                                    <div class="card bg-secondary">
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs card-header-tabs bg-secondary" id="tabs-list"
+                                                role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#description" role="tab"
+                                                        aria-controls="description" aria-selected="true">Values</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#respect" role="tab"
+                                                        aria-controls="respect" aria-selected="false">Respect</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#friends" role="tab"
+                                                        aria-controls="friends" aria-selected="false">Friendship</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#Love" role="tab" aria-controls="Love"
+                                                        aria-selected="false">Responsibility</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Values</h4>
+
+                                            <div class="tab-content mt-3">
+                                                <div class="tab-pane active" id="description" role="tabpanel">
+                                                    <p class="card-text"> The following are the values that we aim to
+                                                        follow and we believe we are following it as of now. Please do
+                                                        click
+                                                        on the tabs and know more about us <i
+                                                            class="bi bi-arrow-through-heart-fill"></i> </p>
+                                                </div>
+
+                                                <div class="tab-pane" id="respect" role="tabpanel"
+                                                    aria-labelledby="respect-tab">
+                                                    <p class="card-text">Respect is a value we prioritise in our
+                                                        company. By
+                                                        dealing with people in all areas of diversity, we have
+                                                        learned to treat them with respect and honor. We listen to them
+                                                        and consider their views. Because everyone as a
+                                                        is worth respecting. Accepting others
+                                                        is the basis of respect, and as a result, you
+                                                        can evaluate others without feeling obliged to accept all their
+                                                        opinions
+                                                    </p>
+                                                </div>
+
+                                                <div class="tab-pane" id="friends" role="tabpanel"
+                                                    aria-labelledby="friends-tab">
+                                                    <p class="card-text">Friends are invaluable and important in life.
+                                                        As long as we are alive, we can always say with confidence that
+                                                        we need friends. Have been working with multiple clients, we
+                                                        realised that, building realtionship with our clients is
+                                                        essential in ensuring the proect goes off without a hitch
+                                                    </p>
+                                                </div>
+                                                <div class="tab-pane" id="Love" role="tabpanel"
+                                                    aria-labelledby="resposibility-tab">
+                                                    <p class="card-text">Responsibility is a key core valuie of our
+                                                        company and of our emplyee. Our employees are mature and are
+                                                        earnest teachers, they perform 150% of what is expected of them.
+                                                        Corporate social responsibility is a business model by which
+                                                        companies make a concerted effort to operate in ways that
+                                                        enhance rather than degrade society and the environment
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- the end of the tabs -->
+                            </div>
+                            <div class="row ">
+                                <!-- the cards -->
+                                <div class=" reveal_2 col-lg-5" id="accord">
+                                    <div class="card bg-dark">
+                                        <div class="card-header">
+                                            Blog
+                                        </div>
+                                        <div class="card-body">
+                                            <h2 class="card-title">What can yopu expect of us</h2>
+                                            <p class="card-text">As clients you can expect us to provide you with
+                                                support 24/7, 365days. We are theer for, we arer here to support you in
+                                                oyur projects, we hare here so that you don't have to do the mundae
+                                                boring work.</p>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            /body
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 card bg-dark  ">
+                                        <div class="card-header ">
+                                            Timeline
+                                        </div>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Our Goal</h4>
+                                            <p class="card-text">We are people who want to teach others, we simple wnat
+                                                to do what we love and help other people in thier work</p>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            /head
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- the aniamted drop -->
+                                <div class="col-lg-6 reveal_1" id="anima">
+                                    <h1 class="title">
+                                        Take a look at my Webpage, <br> there are interesting Pages ahead,<br>
+                                        <div class="rotate-words">
+                                            <span style="--d:0s">Blog</span>
+                                            <span style="--d:5s">Services</span>
+                                            <span style="--d:10s">Contact</span>
+                                        </div>
+                                    </h1>
+                                </div>
+                                <!-- the video row -->
+                                <div id="appleRot" class="py-6 mt-2">
+                                    <div class="video_main row col-xl-12 reveal_1">
+                                        <video class="col-xl-6 col-md-6" controls>
+                                            <source src="../Images/index2[Video of me coding].mp4" type="video/ogg">
+                                        </video>
+
+                                        <iframe width="796" height="480" class="col-xl- col-md-6 reveal_2"
+                                            src="https://www.youtube.com/embed/rOgbqANG-6I"
+                                            title="Building smarter, more sustainable, liveable cities: The Urban Analytics Lab"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="row col-xl-12">
+                                        <div id="muted_text py-4" class="h4">
+                                            The videos above show some of our projects...
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- 
+                            
+                                <!-- my portfolio button -->
+                    <div id="links" class="col-lg-12">
+                        <div class="row">
+                            <a href="../HTML/OUR_contact.html" class="col-lg-2 contact-button">
+                                <div>
+                                    <span class="bg"></span>
+                                    <span class="base"></span>
+                                    <span class="text">
+                                        Contact me!
+                                    </span>
+                                </div>
+                            </a>
+
+                            <div class="col-lg-8" id="link_list">
+                                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Facebook">
+                                    <i class="bi bi-facebook"></i>
+                                </button>
+                                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Reddit">
+                                    <i class="bi bi-reddit"></i>
+                                </button>
+                                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Github">
+                                    <i class="bi bi-github"></i>
+
+                                </button>
+
+                                <button type="button" class="btn " data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Youtube">
+                                    <i class="bi bi-youtube"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fake-big-2">Projects</div>
+                </section>
+            </div>
+        </div>
+
+    </section>
+
+    <!--  -->
+
+    <div class="scroll-down">
+        <span>scroll down
+        </span>
+        <i class="bi bi-arrow-right" id="caret"></i>
+    </div>
+
+
+    <div id="fake-magicwall" class="col-lg-12 rowfake-magicwall">
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <!--These 2 cdn are used for the radar chart-->
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <!--These 2 cdn are used for the radar chart-->
+    <script src="../JS/aboutme.js"></script>
+    <script src="../JS/scroll.js"></script>
+    <script src="../JS/OUR_chatbot.js"></script>
+</body>
+
+</html>
