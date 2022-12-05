@@ -1,0 +1,172 @@
+a {
+  color: inherit;
+  text-decoration: inherit;
+  /*this is to allow the a--link not to be blue and underlined like a general link */
+}
+
+body {
+  /*this is to standardise the font-family used throughout and the by making the padding and margin 0 ; it makes it easier to give custom padding and margin later on*/
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+::selection {
+  /*additonal feature, when the user want to copy it turns to yello*/
+  background-color: #f7ca18;
+  color: #1b1b1b;
+}
+
+section {
+  background-color: #1b1b1b;
+  /*used to give the homeapge a more light black*/
+  height: 100vh;
+  display: flex;
+}
+
+section .title {
+  width: 100%;
+  align-self: center;
+  transform: translateY(-50px);
+  /*to make it more towards the sides*/
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+#title_wrapper {
+  margin: 0;
+  padding: 0;
+  max-height: 50vh;
+  min-height: 15vh;
+  padding-top: 10%;
+}
+
+section .title span {
+  display: inline-block;
+  font-size: 10vw;
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  animation: byBottom 1s ease both;
+  font-weight: 600;
+  letter-spacing: 0.25vw;
+  /*0.25vw means 0.25 *viewpoint width is going to be the spacing given*/
+}
+
+section .title span:last-child {
+  font-size: 1rem;
+  animation: byBottom 1s 0.25s ease both;
+}
+
+/*the bybottom is used throughout*/
+
+section .title span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #f45f7f;
+}
+
+section .title span a::after {
+  /*this is used to give a border-bottom to the link--a that is animated */
+  content: "";
+  height: 2px;
+  background-color: #f45f7f;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  animation: linkAfter 0.5s 1s ease both;
+}
+
+
+
+@keyframes byBottom {
+  0% {
+    transform: translateY(150%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*the byBottom animation basically acts like a transition from bottom-up, i have used it in my other pages but they invole scrolling but here this is a simpler one so a animation suffices*/
+
+@keyframes byBottom1 {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}/*the bybottom1 is the same exact thing as bybottom, but it just moves from left to right*/
+
+@keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 30px;
+  }
+}
+/*the border is increased from 0 to 30px after appearing*/
+.navbar {
+  background-color: #1b1b1b;
+  position: relative;
+  animation: byBottom1 1.25s ease both;
+  max-height: 2vh;
+  transform: translateY(-15%);
+  padding: 5% 3% 0 0;
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-toggler,
+.navbar-toggler-icon {
+  color: #fff !important;
+}
+.navbar-toggler-icon{
+  color: white !important;
+}
+
+.navbar-brand {
+  font-size: 3rem !important;
+}
+
+.nav-link {
+  font-size: 2rem !important;
+  border: transparent solid 3px;
+  border-radius: 25%;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: black !important;
+  background-color: #fff;
+}
+
+/*the following code is for the animated line drawing*/
+
+.consultang>svg {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: 4s ease-in forwards like;
+}
+
+@keyframes like{
+  0%{
+    stroke-dashoffset: 2000;
+  }
+
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
